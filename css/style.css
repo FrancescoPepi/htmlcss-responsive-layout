@@ -86,7 +86,7 @@ header .button {
   text-align: center;
 }
 
-.col:first-child .card {
+#intro .col:first-child .card {
   text-align: left;
 }
 #intro .button {
@@ -116,6 +116,16 @@ header .button {
   background: #9792e4;
 }
 
+/* ? section 3 - #TESTIMONIALS */
+
+#testimonials .col:first-child .card {
+  background-color: transparent;
+}
+
+#testimonials :not(:first-child) .card {
+  background-color: #9792e4;
+}
+
 /****************
 *TODO  MEDIA QUERY
 *****************/
@@ -135,6 +145,18 @@ header .button {
   }
   #intro .card {
     height: 100%;
+  }
+
+  #testimonials :not(:first-child) .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #testimonials .card-img {
+    flex: 1;
+  }
+  #testimonials .card-text {
+    flex: 3;
   }
 }
 
