@@ -12,10 +12,16 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 /****************
 *TODO    UTILITY
 *****************/
 .container {
+  width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -23,6 +29,10 @@ li {
 .button {
   padding: 5px 8px;
   border-radius: 50px;
+}
+
+.row {
+  margin: 0 -1.5rem;
 }
 
 /****************
@@ -51,6 +61,22 @@ header .button {
   color: black;
 }
 
+/* ? section 1 - #intro */
+
+.col {
+  padding: 0 1.5rem;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: #b5ddff;
+  text-align: center;
+}
+
+.col:first-child .card {
+  text-align: left;
+}
+
 /****************
 *TODO  MEDIA QUERY
 *****************/
@@ -58,6 +84,19 @@ header .button {
 /* ? TABLET */
 
 @media screen and (min-width: 576px) {
+  #intro .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #intro .col {
+    width: calc(100% / 3);
+  }
+  #intro .col:first-child {
+    width: calc(100% / 3 * 2);
+  }
+  #intro .card {
+    height: 100%;
+  }
 }
 
 /* ? DESKTOP */
@@ -74,6 +113,13 @@ header .button {
     display: flex;
     gap: 1.5rem;
   }
+  #intro .col:first-child .card {
+    display: flex;
+  }
+  .card-text,
+  .card-img {
+    width: 50%;
+  }
 }
 
 /****************
@@ -82,4 +128,5 @@ header .button {
 
 .debug * {
   border: 2px dashed black;
+  padding: 10px;
 }
