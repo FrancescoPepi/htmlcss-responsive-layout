@@ -8,6 +8,10 @@
   margin: 0;
 }
 
+header + * {
+  margin-top: 100px;
+}
+
 li {
   list-style-type: none;
 }
@@ -35,6 +39,10 @@ a {
   margin: 0 -1.5rem;
 }
 
+.container-content {
+  margin: 20px 0;
+}
+
 /****************
 *TODO    SECTION
 *****************/
@@ -42,6 +50,10 @@ a {
 /* ? HEADER */
 
 header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   height: 100px;
   line-height: 100px;
   background-color: #0084fd;
@@ -64,17 +76,44 @@ header .button {
 /* ? section 1 - #intro */
 
 .col {
-  padding: 0 1.5rem;
+  padding: 1.5rem;
 }
 
 .card {
   border-radius: 25px;
+  padding: 1.5rem;
   background-color: #b5ddff;
   text-align: center;
 }
 
 .col:first-child .card {
   text-align: left;
+}
+#intro .button {
+  background-color: #0084fd;
+  padding: 7px 40px;
+}
+
+/* ? section 2 - #STRATEGIC PLANNING */
+#strategic-section {
+  background-color: #9792e4;
+}
+
+#strategic-section .col:first-child .card {
+  background-color: transparent;
+  text-align: left;
+}
+
+#strategic-section .col:last-child .card {
+  background-color: #ffffff;
+}
+
+#strategic-section .fa-arrow-down {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: #9792e4;
 }
 
 /****************
@@ -119,6 +158,16 @@ header .button {
   .card-text,
   .card-img {
     width: 50%;
+  }
+  #strategic-section .row {
+    display: flex;
+    padding: 0 8rem;
+  }
+  #strategic-section .col {
+    width: calc(100% / 2);
+  }
+  #strategic-section .col:last-child .card {
+    margin-top: 5rem;
   }
 }
 
