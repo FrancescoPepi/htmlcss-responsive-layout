@@ -133,6 +133,8 @@ header .button {
 
 #benefits .col:first-child .card {
   background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #benefits :not(:first-child) .card {
@@ -145,6 +147,26 @@ header .button {
   background-color: #9792e4;
 }
 
+/* ? section 5 - #ABOUT US */
+#about-us .card {
+  background-color: transparent;
+  text-align: left;
+}
+
+#about-us .button {
+  padding: 5px 15px;
+  background-color: #9792e4;
+}
+
+/* ? section 6 - #started */
+
+#started {
+  background-color: #9792e4;
+}
+#started .card {
+  background-color: transparent;
+}
+
 /****************
 *TODO  MEDIA QUERY
 *****************/
@@ -155,7 +177,8 @@ header .button {
   /* ? section 1 - #intro */
 
   #intro .row,
-  #benefits .row {
+  #benefits .row,
+  #about-us .row {
     display: flex;
     flex-wrap: wrap;
   }
@@ -192,6 +215,20 @@ header .button {
   #benefits .col {
     width: calc(100% / 2);
   }
+
+  /* ? section 5 - #ABOUT US */
+
+  #about-us .col:first-child {
+    width: 60%;
+  }
+
+  #about-us .col:last-child {
+    width: 40%;
+  }
+
+  /* #about-us .row:last-child .col{
+	width: 30%;
+  } */
 }
 
 /* ? DESKTOP */
@@ -225,7 +262,8 @@ header .button {
 
   #strategic-section .row {
     display: flex;
-    padding: 0 8rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   #strategic-section .col {
     width: calc(100% / 2);
@@ -238,6 +276,11 @@ header .button {
 
   #benefits .col {
     width: calc(100% / 3);
+  }
+
+  #about-us .row {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
