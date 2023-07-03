@@ -8,12 +8,21 @@
   margin: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 /****************
 *TODO    UTILITY
 *****************/
 .container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.button {
+  padding: 5px 8px;
+  border-radius: 50px;
 }
 
 /****************
@@ -27,14 +36,45 @@ header {
   line-height: 100px;
   background-color: #0084fd;
 }
+
 #header .container {
   display: flex;
   justify-content: space-between;
 }
 
+.menu-full {
+  display: none;
+}
+
+header .button {
+  background-color: white;
+  color: black;
+}
+
 /****************
 *TODO  MEDIA QUERY
 *****************/
+
+/* ? TABLET */
+
+@media screen and (min-width: 576px) {
+}
+
+/* ? DESKTOP */
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .menu-hamburger {
+    display: none;
+  }
+  .menu-full {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
 
 /****************
 *TODO    DEBUG
