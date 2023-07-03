@@ -126,6 +126,25 @@ header .button {
   background-color: #9792e4;
 }
 
+/* ? section 4 - #BENEFITS */
+#benefits {
+  background-color: #9792e4;
+}
+
+#benefits .col:first-child .card {
+  background-color: transparent;
+}
+
+#benefits :not(:first-child) .card {
+  text-align: left;
+  background-color: white;
+}
+
+#benefits .button {
+  padding: 7px 40px;
+  background-color: #9792e4;
+}
+
 /****************
 *TODO  MEDIA QUERY
 *****************/
@@ -133,7 +152,10 @@ header .button {
 /* ? TABLET */
 
 @media screen and (min-width: 576px) {
-  #intro .row {
+  /* ? section 1 - #intro */
+
+  #intro .row,
+  #benefits .row {
     display: flex;
     flex-wrap: wrap;
   }
@@ -147,6 +169,8 @@ header .button {
     height: 100%;
   }
 
+  /* ? section 3 - #TESTIMONIALS */
+
   #testimonials :not(:first-child) .card {
     display: flex;
     align-items: center;
@@ -158,11 +182,23 @@ header .button {
   #testimonials .card-text {
     flex: 3;
   }
+
+  /* ? section 4 - #BENEFITS */
+
+  #benefits .col:first-child {
+    width: 100%;
+  }
+
+  #benefits .col {
+    width: calc(100% / 2);
+  }
 }
 
 /* ? DESKTOP */
 
 @media screen and (min-width: 992px) {
+  /* ? HEADER */
+
   .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -174,6 +210,9 @@ header .button {
     display: flex;
     gap: 1.5rem;
   }
+
+  /* ? section 1 - #intro */
+
   #intro .col:first-child .card {
     display: flex;
   }
@@ -181,6 +220,9 @@ header .button {
   .card-img {
     width: 50%;
   }
+
+  /* ? section 2 - #STRATEGIC PLANNING */
+
   #strategic-section .row {
     display: flex;
     padding: 0 8rem;
@@ -190,6 +232,12 @@ header .button {
   }
   #strategic-section .col:last-child .card {
     margin-top: 5rem;
+  }
+
+  /* ? section 4 - #BENEFITS */
+
+  #benefits .col {
+    width: calc(100% / 3);
   }
 }
 
