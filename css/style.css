@@ -8,8 +8,13 @@
   margin: 0;
 }
 
+body {
+  font-family: "Akatab", sans-serif;
+  font-weight: 900;
+}
+
 header + * {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 li {
@@ -26,23 +31,37 @@ a {
 *****************/
 .container {
   width: 100%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .button {
-  padding: 5px 8px;
   border-radius: 50px;
+  letter-spacing: 3px;
+  font-size: 20px;
 }
 
 .row {
-  margin: 0 -1.5rem;
+  margin: 0 -25px;
 }
 
 .container-content {
   margin: 20px 0;
 }
 
+.col {
+  padding: 25px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+p:not(.copyright) {
+  line-height: 2.3rem;
+  font-size: 20px;
+}
 /****************
 *TODO    SECTION
 *****************/
@@ -54,44 +73,81 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  height: 100px;
-  line-height: 100px;
+  z-index: 3;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  height: 80px;
+  line-height: 80px;
   background-color: #0084fd;
 }
 
 #header .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu-full {
   display: none;
 }
 
-header .button {
+header .button-start {
+  padding: 10px 15px;
+  border-radius: 50px;
   background-color: white;
   color: black;
 }
 
 /* ? section 1 - #intro */
 
-.col {
-  padding: 1.5rem;
+#intro h3 {
+  color: #0084fd;
+}
+
+#intro p {
+  color: #5a6e7f;
 }
 
 .card {
   border-radius: 25px;
-  padding: 1.5rem;
+  padding: 32px;
   background-color: #b5ddff;
   text-align: center;
 }
 
 #intro .col:first-child .card {
   text-align: left;
+  gap: 0px;
+}
+#intro .col .card {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 #intro .button {
+  max-width: 350px;
   background-color: #0084fd;
-  padding: 7px 40px;
+  padding: 1rem 6rem;
+}
+
+#intro .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+#intro .card-img > img {
+  margin-top: 2rem;
+  width: 100%;
+  position: relative;
+  bottom: -2rem;
+  display: block;
+}
+
+#intro .icon > i {
+  font-size: 100px;
 }
 
 /* ? section 2 - #STRATEGIC PLANNING */
@@ -156,6 +212,8 @@ header .button {
 #about-us .button {
   padding: 5px 15px;
   background-color: #9792e4;
+  letter-spacing: normal;
+  font-weight: 400;
 }
 
 /* ? section 6 - #started */
@@ -221,6 +279,11 @@ footer .row {
     height: 100%;
   }
 
+  #intro .card-img {
+    width: 60%;
+    margin-top: auto;
+  }
+
   /* ? section 3 - #TESTIMONIALS */
 
   #testimonials :not(:first-child) .card {
@@ -262,11 +325,11 @@ footer .row {
 
 /* ? DESKTOP */
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   /* ? HEADER */
 
   .container {
-    max-width: 1180px;
+    max-width: 1280px;
     margin: 0 auto;
   }
   .menu-hamburger {
@@ -280,11 +343,21 @@ footer .row {
   /* ? section 1 - #intro */
 
   #intro .col:first-child .card {
-    display: flex;
+    flex-direction: row;
   }
-  .card-text,
-  .card-img {
+  #intro .card-text {
+    margin-top: 0;
     width: 50%;
+    gap: 25px;
+  }
+
+  #intro .card-img {
+    width: 50%;
+  }
+
+  #intro .card-img > img {
+    width: 80%;
+    left: 50px;
   }
 
   /* ? section 2 - #STRATEGIC PLANNING */
