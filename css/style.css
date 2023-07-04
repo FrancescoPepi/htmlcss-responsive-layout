@@ -58,6 +58,7 @@ p:not(.copyright) {
   border-radius: 50px;
   letter-spacing: 3px;
   font-size: 20px;
+  padding: 1rem 6rem;
 }
 
 .row {
@@ -234,19 +235,27 @@ header .button-start {
 }
 
 /* ? section 4 - #BENEFITS */
-
-#benefits .col:first-child .card {
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
+#benefits h2:not(.card > h2) {
+  text-align: center;
 }
 
-#benefits :not(:first-child) .card {
+#benefits .card > h2,
+#benefits .card > h3 {
+  color: #9792e4;
+}
+
+#benefits .card {
   text-align: left;
 }
 
+#benefits .card > p {
+  color: #5a6e7f;
+  font-weight: 100;
+}
+
 #benefits .button {
-  padding: 7px 40px;
+  font-size: 30px;
+  padding: 10px 80px;
   background-color: #9792e4;
 }
 
@@ -337,10 +346,6 @@ footer .row {
   }
 
   /* ? section 4 - #BENEFITS */
-
-  #benefits .col:first-child {
-    width: 100%;
-  }
 
   #benefits .col {
     width: calc(100% / 2);
