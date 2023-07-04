@@ -80,6 +80,18 @@ section:nth-of-type(even) {
   }
 }
 
+section:nth-of-type(odd) {
+  background-color: white;
+  color: black;
+  & h2 {
+    color: #9792e4;
+  }
+}
+section:nth-of-type(odd):not(:first-child) .card {
+  background-color: #9792e4;
+  color: white;
+}
+
 .card {
   border-radius: 25px;
   padding: 32px;
@@ -93,6 +105,25 @@ section:nth-of-type(even) {
   gap: 48px;
 }
 
+.profile {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 /****************
 *TODO    SECTION
 *****************/
@@ -151,13 +182,6 @@ header .button-start {
   padding: 1rem 6rem;
 }
 
-#intro .card-text {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-
 #intro .card-img > img {
   margin-top: 2rem;
   position: relative;
@@ -202,12 +226,11 @@ header .button-start {
 
 /* ? section 3 - #TESTIMONIALS */
 
-#testimonials .col:first-child .card {
-  background-color: transparent;
+#testimonials {
+  text-align: center;
 }
-
-#testimonials :not(:first-child) .card {
-  background-color: #9792e4;
+#testimonials p {
+  font-weight: 100;
 }
 
 /* ? section 4 - #BENEFITS */
@@ -307,16 +330,10 @@ footer .row {
 
   /* ? section 3 - #TESTIMONIALS */
 
-  #testimonials :not(:first-child) .card {
-    display: flex;
+  #testimonials .card {
+    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-  }
-  #testimonials .card-img {
-    flex: 1;
-  }
-  #testimonials .card-text {
-    flex: 3;
+    justify-content: end;
   }
 
   /* ? section 4 - #BENEFITS */
