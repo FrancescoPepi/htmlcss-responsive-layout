@@ -26,6 +26,25 @@ a {
   color: white;
 }
 
+img:not(header img) {
+  width: 100%;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+p:not(.copyright) {
+  line-height: 2.3rem;
+  font-size: 25px;
+}
+
 /****************
 *TODO    UTILITY
 *****************/
@@ -53,15 +72,27 @@ a {
   padding: 25px;
 }
 
-h3 {
-  font-size: 30px;
-  font-weight: 900;
+section:nth-of-type(even) {
+  background-color: #9792e4;
+  color: white;
+  & .card {
+    background-color: white;
+  }
 }
 
-p:not(.copyright) {
-  line-height: 2.3rem;
-  font-size: 20px;
+.card {
+  border-radius: 25px;
+  padding: 32px;
+  background-color: #b5ddff;
+  text-align: center;
 }
+
+.col .card {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
 /****************
 *TODO    SECTION
 *****************/
@@ -109,22 +140,11 @@ header .button-start {
   color: #5a6e7f;
 }
 
-.card {
-  border-radius: 25px;
-  padding: 32px;
-  background-color: #b5ddff;
-  text-align: center;
-}
-
 #intro .col:first-child .card {
   text-align: left;
   gap: 0px;
 }
-#intro .col .card {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
+
 #intro .button {
   max-width: 350px;
   background-color: #0084fd;
@@ -140,7 +160,6 @@ header .button-start {
 
 #intro .card-img > img {
   margin-top: 2rem;
-  width: 100%;
   position: relative;
   bottom: -2rem;
   display: block;
@@ -151,17 +170,22 @@ header .button-start {
 }
 
 /* ? section 2 - #STRATEGIC PLANNING */
-#strategic-section {
-  background-color: #9792e4;
+
+#strategic-section .container-content {
+  margin: 70px auto;
+  & p {
+    font-weight: 200;
+  }
 }
 
-#strategic-section .col:first-child .card {
-  background-color: transparent;
-  text-align: left;
+#strategic-section .card h3 {
+  color: black;
 }
-
-#strategic-section .col:last-child .card {
-  background-color: #ffffff;
+#strategic-section .card > p {
+  font-style: italic;
+  font-weight: 100;
+  line-height: 60px;
+  color: black;
 }
 
 #strategic-section .fa-arrow-down {
@@ -170,6 +194,10 @@ header .button-start {
   line-height: 50px;
   border-radius: 50%;
   background: #9792e4;
+}
+
+#strategic-section .card {
+  align-items: center;
 }
 
 /* ? section 3 - #TESTIMONIALS */
@@ -183,9 +211,6 @@ header .button-start {
 }
 
 /* ? section 4 - #BENEFITS */
-#benefits {
-  background-color: #9792e4;
-}
 
 #benefits .col:first-child .card {
   background-color: transparent;
@@ -195,7 +220,6 @@ header .button-start {
 
 #benefits :not(:first-child) .card {
   text-align: left;
-  background-color: white;
 }
 
 #benefits .button {
@@ -218,9 +242,6 @@ header .button-start {
 
 /* ? section 6 - #started */
 
-#started {
-  background-color: #9792e4;
-}
 #started .card {
   background-color: transparent;
 }
@@ -369,6 +390,9 @@ footer .row {
   }
   #strategic-section .col {
     width: calc(100% / 2);
+  }
+  #strategic-section .container-content > img {
+    margin-bottom: 120px;
   }
   #strategic-section .col:last-child {
     margin-top: auto;
