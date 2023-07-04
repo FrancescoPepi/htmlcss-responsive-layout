@@ -260,9 +260,19 @@ header .button-start {
 }
 
 /* ? section 5 - #ABOUT US */
-#about-us .card {
-  background-color: transparent;
-  text-align: left;
+#about-us .col > p {
+  line-height: 50px;
+  font-weight: 100;
+  margin-bottom: 60px;
+}
+
+#about-us .col h3 {
+  color: #9792e4;
+  max-width: 250px;
+}
+
+#about-us .profile {
+  margin: 0;
 }
 
 #about-us .button {
@@ -347,6 +357,10 @@ footer .row {
 
   /* ? section 4 - #BENEFITS */
 
+  #benefits :first-child.col {
+    width: 100%;
+  }
+
   #benefits .col {
     width: calc(100% / 2);
   }
@@ -425,6 +439,8 @@ footer .row {
   #benefits .col {
     width: calc(100% / 3);
   }
+
+  /* ? section 4 - #ABOUT-US */
 
   #about-us .row {
     padding-left: 6rem;
